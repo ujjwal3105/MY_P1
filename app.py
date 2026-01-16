@@ -2,6 +2,13 @@ import numpy as np
 import pandas as pd 
 import streamlit as st 
 import joblib
+import os
+MODEL_PATH=os.path.join(os.path.dirname(__file__),"BEST.joblib")
+
+@st.cache_resource
+def load_model():
+    return joblib.load("BEST.joblib")
+model=load_model()
 
 model=joblib.load("BEST.joblib")
 
