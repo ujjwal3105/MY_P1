@@ -3,7 +3,7 @@ import pandas as pd
 import joblib 
 import streamlit as st
 
-model=joblib.load("svc.joblib")
+model=joblib.load("SVC.joblib")
 
 st.set_page_config(
     page_title="CANCER DETECTION",
